@@ -1,0 +1,6 @@
+edu/tallerjava/controladores/CategorySingleton.class
+edu/tallerjava/controladores/CategoriesController.class
+edu/tallerjava/modelo/Category.class
+edu/tallerjava/repositorios/CategoryRepository.class
+edu/tallerjava/Application.class
+edu/tallerjava/controladores/BasicController.class
