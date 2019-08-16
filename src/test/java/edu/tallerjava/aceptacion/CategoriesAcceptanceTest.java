@@ -1,6 +1,7 @@
 package edu.tallerjava.aceptacion;
 
 import edu.tallerjava.modelo.Category;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.core.ParameterizedTypeReference;
 import org.springframework.http.HttpStatus;
@@ -48,6 +49,7 @@ public class CategoriesAcceptanceTest extends AcceptanceTest{
     @Test
     public void createCategory(){
         Category category = new Category();
+        category.setNombre("Prueba");
         final ResponseEntity<Category> responseEntity = restTemplate.postForEntity(url + "/categories",category,Category.class);
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isNotNull();
