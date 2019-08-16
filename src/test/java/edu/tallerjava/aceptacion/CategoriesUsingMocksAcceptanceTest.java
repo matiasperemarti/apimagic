@@ -18,7 +18,7 @@ public class CategoriesUsingMocksAcceptanceTest extends AcceptanceTest{
     private CategoryRepository categoryRepository;
 
     @Test
-    @Ignore
+    //@Ignore
     public void findAll() {
 
         List<Category> list = new LinkedList<>();

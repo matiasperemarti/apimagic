@@ -1,6 +1,7 @@
 package edu.tallerjava.servicios;
 
 import edu.tallerjava.modelo.Category;
+import edu.tallerjava.repositorios.CategoryAPIMeli;
 import edu.tallerjava.repositorios.CategoryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,12 +16,15 @@ public class ApiServiceImpl implements ApiService {
     @Autowired
     private CategoryRepository categoryRepository;
 
+    @Autowired
+    private CategoryAPIMeli categoryAPIMeli;
+
     public List<Category> findAll(){
-        return categoryRepository.findAll();
+        return categoryAPIMeli.findAll();
     }
 
     public Optional<Category> findById(long id){
-        return categoryRepository.findById(id);
+        return categoryAPIMeli.findById(id);
     }
 
     public Category create(Category category){
